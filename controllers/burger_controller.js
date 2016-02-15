@@ -4,7 +4,8 @@ var burger = require('../models/burger.js');
 
 router.get('/', function(req, res){
   burger.showMeTheBurgers(function(data){
-    res.send(data);
+    // TODO Pass {data} in below as second argument using handlebars
+    res.render('burgersindex');
   });
 });
 
