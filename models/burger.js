@@ -6,4 +6,4 @@ var tastyBurger = {
   }
 }
 
-tastyBurger.addTheBurger('Mayo Mountain');
+// TEST SUCCESS - tastyBurger.addTheBurger works
