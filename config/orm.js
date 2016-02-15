@@ -15,7 +15,7 @@ var orm = {
     var q = 'INSERT INTO ' + table + '(burger_name, devoured) VALUES (?,?);';
     connection.query(q, [burger, false], function(err, res){
       if(err){ throw err }
-      // callBack(res);
+      callBack(res);
     });
   }
   // TODO Devour burger, update db to show devoured
