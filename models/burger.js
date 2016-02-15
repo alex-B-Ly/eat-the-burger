@@ -11,5 +11,5 @@ var tastyBurger = {
   }
 }
 
-tastyBurger.showMeTheBurgers();
-// TEST SUCCESS - tastyBurger.addTheBurger works
+module.exports = tastyBurger;
+// TEST SUCCESS - tastyBurger.addTheBurger and addTheBurger works
