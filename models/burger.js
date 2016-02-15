@@ -3,7 +3,7 @@ var orm = require('../config/orm.js');
 var tastyBurger = {
   showMeTheBurgers: function(cb){
     orm.showBurgers('burgers', function(res){
-      console.log(res);
+      cb(res);
     });
   },
   addTheBurger: function(burgerName, cb){
