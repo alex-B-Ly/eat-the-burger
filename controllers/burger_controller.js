@@ -3,7 +3,9 @@ var router = express.Router();
 var burger = require('../models/burger.js');
 
 router.get('/', function(req, res){
-  burger.showMeTheBurgers();
+  burger.showMeTheBurgers(function(data){
+    res.send(data);
+  });
 });
 
 module.exports = router;
