@@ -1,6 +1,5 @@
 var connection = require('./connection.js');
 
-// TODO Create orm object with SQL insertion methods for exportation
 var orm = {
   // Show all the burgers
   showBurgers: function(table, callBack){
