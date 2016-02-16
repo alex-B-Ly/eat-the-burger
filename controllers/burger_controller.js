@@ -19,7 +19,7 @@ router.post('/add-burger', function(req, res){
 
 router.post('/devour', function(req, res){
   // TODO pass burger id into first param below
-  burger.devourThatBurger(5, function(result){
+  burger.devourThatBurger(req.body.burger_id, function(result){
     console.log('You have devoured that burger, you glutton!');
     res.redirect('/');
   });
