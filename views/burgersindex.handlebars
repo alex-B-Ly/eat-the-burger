@@ -15,8 +15,8 @@
       {{#if devoured}}
         <button class="btn burgen-name devoured" disabled title="I have been devoured!">{{this.id}}. {{this.burger_name}}</button>
       {{else}}
-        <form>
-          <button type="submit" class="btn burger-name uneaten" name="id" value={{this.id}} title="EAT ME!">{{this.id}}. {{this.burger_name}}</button>
+        <form action="/devour" method="POST">
+          <button type="submit" class="btn burger-name uneaten" name="burger_id" value={{this.id}} title="EAT ME!">{{this.id}}. {{this.burger_name}}</button>
         </form>
       {{/if}}
     {{/each}}
