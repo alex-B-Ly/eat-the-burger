@@ -18,7 +18,7 @@ var orm = {
       callBack(res);
     });
   },
-  // TODO Devour burger, update db to show devoured
+  // Devour burger, update db to show devoured
   devourBurger: function(table, burger_id, callBack){
     var q = 'UPDATE ' + table + ' SET devoured = true WHERE id = ?;';
     connection.query(q, [burger_id], function(err, res){
