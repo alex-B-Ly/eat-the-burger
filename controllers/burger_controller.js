@@ -3,9 +3,9 @@ var router = express.Router();
 var burger = require('../models/burger.js');
 
 router.get('/', function(req, res){
-  burger.showMeTheBurgers(function(data){
-    // TODO Pass {data} in below as second argument using handlebars
-    res.render('burgersindex');
+  burger.showMeTheBurgers(function(burgerData){
+    // TODO Pass {burgerData} in below as second argument using handlebars
+    res.render('burgersindex', {burgerData});
   });
 });
 

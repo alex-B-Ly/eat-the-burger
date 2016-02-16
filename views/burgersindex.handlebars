@@ -1,1 +1,22 @@
-  <h1>TEST WORKS</h1>
+  <h1>Eat the Burgers!</h1>
+  <p class="burger-instructions">
+    Click on a burger to devour it!
+  </p>
+
+  <section class="burger-add-area">
+    <form action="/add-burger" method="POST">
+      <!-- CREATE FORM INPUT -->
+    </form>
+  </section>
+
+  <section class="burger-area">
+    {{#each burgerData}}
+      {{#if devoured}}
+        <button class="btn burgen-name devoured" disabled title="I have been devoured!">{{this.id}}. {{this.burger_name}}</button>
+      {{else}}
+        <form>
+          <button type="submit" class="btn burger-name uneaten" name="id" value={{this.id}} title="EAT ME!">{{this.id}}. {{this.burger_name}}</button>
+        </form>
+      {{/if}}
+    {{/each}}
+  </section>
