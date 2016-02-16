@@ -4,7 +4,6 @@ var burger = require('../models/burger.js');
 
 router.get('/', function(req, res){
   burger.showMeTheBurgers(function(burgerData){
-    // TODO Pass {burgerData} in below as second argument using handlebars
     res.render('burgersindex', {burgerData});
   });
 });
@@ -18,7 +17,7 @@ router.post('/add-burger', function(req, res){
 });
 
 router.post('/devour', function(req, res){
-  // TODO pass burger id into first param below
+  // Burger method called, takes burger_id from name attr and sets devoured to true
   burger.devourThatBurger(req.body.burger_id, function(result){
     console.log('You have devoured that burger, you glutton!');
     res.redirect('/');
@@ -27,4 +26,4 @@ router.post('/devour', function(req, res){
 
 module.exports = router;
 
-// TEST SUCCESS - home get route and add-burger work (tested with get method)
+// TEST SUCCESS - home get route, add-burger and devour work
