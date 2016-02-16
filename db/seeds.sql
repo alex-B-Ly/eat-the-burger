@@ -1,1 +1,1 @@
-INSERT INTO burgers (burger_name, devoured) VALUES ('Royale with Cheese', TRUE);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Royale with Cheese', TRUE), ('Tartar Delight', FALSE), ('Vegemite Sandwich', FALSE), ('Beef Heaven', FALSE);

@@ -1,0 +1,20 @@
+body {
+  background: #2DE1FC; }
+
+h1 {
+  color: #214F4B; }
+
+.burger-instructions {
+  font-size: 1.3em;
+  margin-top: 10px; }
+
+.burger-name-uneaten,
+.burger-name-devoured {
+  position: relative;
+  margin-bottom: 20px;
+  background: #C48744;
+  color: #FFF92D;
+  padding: 10px;
+  border-radius: 20px; }
+
+/*# sourceMappingURL=style.css.map */

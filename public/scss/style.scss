@@ -1,0 +1,26 @@
+// VARIABLES
+$primarycolor: #2DE1FC;
+$secondarycolor: #214F4B;
+
+body{
+  background: $primarycolor;
+}
+
+h1{
+  color: $secondarycolor;
+}
+
+.burger-instructions{
+  font-size: 1.3em;
+  margin-top: 10px;
+}
+
+.burger-name-uneaten,
+.burger-name-devoured{
+  position: relative;
+  margin-bottom: 20px;
+  background: #C48744;
+  color: #FFF92D;
+  padding: 10px;
+  border-radius: 20px;
+}
