@@ -1,23 +1,30 @@
-  <h1>Eat the Burgers!</h1>
-  <p class="burger-instructions">
-    Click on a burger to devour it!
-  </p>
+  <h1 class='text-center'>Eat the Burgers!</h1>
 
-  <section class="burger-add-area">
+  <section class="burger-add-area text-center">
     <form action="/add-burger" method="POST">
       <input type="text" name="burger_input" />
       <button type="submit" class="btn btn-primary">Add the Burger!</button>
     </form>
   </section>
 
+  <p class="burger-instructions text-center">
+    Click on a burger below to devour it!
+  </p>
+
   <section class="burger-area">
-    {{#each burgerData}}
-      {{#if devoured}}
-        <button class="btn burgen-name devoured" disabled title="I have been devoured!" style="display: block;">{{this.id}}. {{this.burger_name}}</button>
-      {{else}}
-        <form action="/devour" method="POST">
-          <button type="submit" class="btn burger-name uneaten" name="burger_id" value={{this.id}} title="EAT ME!">{{this.id}}. {{this.burger_name}}</button>
-        </form>
-      {{/if}}
-    {{/each}}
+  <div class="row">
+      {{#each burgerData}}
+        {{#if devoured}}
+          <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+            <button class="btn burger-name-devoured" disabled title="I have been devoured!" style="display: block;">{{this.id}}. {{this.burger_name}}</button>
+          </div>
+        {{else}}
+          <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+            <form action="/devour" method="POST">
+              <button type="submit" class="btn burger-name-uneaten" name="burger_id" value={{this.id}} title="EAT ME!">{{this.id}}. {{this.burger_name}}</button>
+            </form>
+          </div>
+        {{/if}}
+      {{/each}}
+    </div>
   </section>
