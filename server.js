@@ -6,6 +6,10 @@ var PORT = process.env.NODE_ENV || 8080;
 
 var app = express();
 
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
+
 // HANDLEBARS
 app.engine('handlebars', handleB({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');

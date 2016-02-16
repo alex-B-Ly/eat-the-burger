@@ -12,7 +12,7 @@ router.get('/', function(req, res){
 router.post('/add-burger', function(req, res){
   // Burger method called, takes burger_name from name attr and callback that redirects user to get route above
     // TODO replace 'Beef Heaven' burger with req.body.whatever_is_in_name_attribute
-  burger.addTheBurger('Beef Heaven', function(result){
+  burger.addTheBurger(req.body.burger_input, function(result){
     console.log('Burger added to table');
     res.redirect('/');
   });
