@@ -8,6 +8,9 @@ var tastyBurger = {
   },
   addTheBurger: function(burgerName, cb){
     orm.addBurger('burgers', burgerName, cb);
+  },
+  devourThatBurger: function(burgerId, cb){
+    orm.devourBurger('burgers', burgerId, cb);
   }
 }
 

@@ -17,9 +17,15 @@ var orm = {
       if(err){ throw err }
       callBack(res);
     });
-  }
+  },
   // TODO Devour burger, update db to show devoured
-
+  devourBurger: function(table, burger_id, callBack){
+    var q = 'UPDATE ' + table + ' SET devoured = true WHERE id = ?;';
+    connection.query(q, [burger_id], function(err, res){
+      if(err){ throw err }
+      callBack(res);
+    });
+  }
 }
 
 module.exports = orm;
